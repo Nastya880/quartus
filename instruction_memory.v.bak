@@ -1,0 +1,11 @@
+module instruction_memory (
+	input 				 clk_i,
+	input 		[31:0] a_i  ,
+	output wire	[31:0] rd_o
+	);
+
+reg [31:0] MEM [0:10]; //11 32битных регистра
+
+assign rd_o = MEM[a_i[7:2]];
+
+endmodule
